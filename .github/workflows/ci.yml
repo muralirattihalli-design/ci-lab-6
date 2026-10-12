@@ -3,9 +3,11 @@ name: Build and Test
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -33,5 +35,5 @@ jobs:
         run: python -m py_compile calculator.py
 
       - name: Run tests
-        run: pytest
+        run: python -m pytest
 ```
